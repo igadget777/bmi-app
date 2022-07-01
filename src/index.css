@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.site-page-header {
+  border: 1px solid rgb(235, 237, 240);
+}
+
+.form-wrapper {
+  background-color: aquamarine;
+  border: 1px solid rgb(202, 200, 200);
+  margin: 20px auto;
+  width: 600px;
+}
+
+.ant-form {
+  padding-top: 10px;
+  background-color: aquamarine;
+}
+
+.ant-form .ant-btn {
+  margin-right: 8px;
+}
+
+#results {
+  text-align: center;
+}
+#results span {
+  font-weight: 600;
+}

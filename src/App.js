@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import NavBar from './components/NavBar'
+import BMI from './components/BMI'
 import './App.css';
 
-function App() {
+function App({ signOut, user }) {
+
+  console.log(user)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      {user ? (
+        <>
+          <NavBar signOut={signOut} user={user} />
+          <BMI user={user} />
+        </>
+      ) : null}
+    </div >
   );
 }
 
-export default App;
+export default withAuthenticator(App);
